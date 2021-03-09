@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Shelter list
+{% endblock %}
+
+{% block content %}
+<h2>{{ shelter.name }}</h2>
+<div>Located in {{ shelter.location }}</div>
+{% if shelter.dog_set.all %}
+    <div>Here is the list of available dogs</div>
+    {% for dog in shelter.dog_set.all %}
+        <div>
+            <a href="{% url 'dog_detail' dog.id %}">
+                {{dog.name}}
+            </a>
+        </div>
+    {% endfor %}
+    </div>
+{% else %}
+    <div>This shelter has no dogs available for adoption</div>
+{% endif %}
+{% endblock %}

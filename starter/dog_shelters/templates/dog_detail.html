@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ dog.name }}
+{% endblock %}
+
+{% block content %}
+<h2>{{ dog.name }}</h2>
+<div>About {{ dog.name }} - {{ dog.description }}</div>
+{% endblock %}
