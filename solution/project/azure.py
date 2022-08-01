@@ -18,7 +18,7 @@ DATABASES = {
     }
 }
 
-# For some database connection types, USER is of the form os.environ['DBUSER']@hostname. 
+# For some database connection types, USER is of the form os.environ['DBUSER'] + "@" + hostname. 
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
