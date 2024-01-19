@@ -1,6 +1,6 @@
 Django
 pylint
 autopep8
-django-crispy-forms
+django-crispy-forms==1.14.0
 whitenoise
 psycopg2-binary
